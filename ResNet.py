@@ -1,8 +1,6 @@
-from keras.layers import Conv2D, \
-                         BatchNormalization,\
+from keras.layers import BatchNormalization,\
                          Activation, \
                          Input, \
-                         GlobalAveragePooling2D,\
                          Dropout, \
                          Dense
 
@@ -76,7 +74,7 @@ def block(n_output, upscale=False):
 def Net_f(filePar):
     # legge il file di PARAMETRI
     with open(filePar, 'r') as ymlfile:
-        cfg = yaml.load(ymlfile)
+        cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
         # CARICO I PARAMETRI DELLA RETE
         input_shape = cfg["parAlg"]["input_shape"]
         input_dim = input_shape[0]
