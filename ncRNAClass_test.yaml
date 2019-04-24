@@ -32,9 +32,9 @@ parAlg :
   dim_dense : 13
 
   validation_split : 0.1
-  learning_rate : 0.005
+  learning_rate : 0.05
   batch_size : 50
-  epochs : 400
+  epochs : 500
   regularizer : 0.01
 
   norma : False
@@ -45,4 +45,4 @@ file :
 
   inputFile : "./dataset_Rfam_650.pkl" # path completo del file di input
   outputDir : "./DirOut/" # directory di output
-  outputFile : "Prova_1" # prefisso del file di output
+  outputFile : "Prova_2" # prefisso del file di output
