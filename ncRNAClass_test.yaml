@@ -32,8 +32,8 @@ parAlg :
   dim_dense : 13
 
   validation_split : 0.1
-  learning_rate : 0.00005
-  batch_size : 64
+  learning_rate : 0.005
+  batch_size : 50
   epochs : 400
   regularizer : 0.01
 
