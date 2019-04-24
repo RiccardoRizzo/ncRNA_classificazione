@@ -1,0 +1,48 @@
+
+
+parEsp :
+    k : 10 #se si vuole eseguire il 10 fold
+
+    # lista delle colonne di input
+    #l_input : ["2-4-1"]
+    l_input : ["3"]
+    #l_input : ["3"]
+    l_output : ["classeID"] # lista delle colonne di uscita
+
+    l_classi : ['ribozyme', 'IRES', '5_8S_rRNA', 'tRNA', 'HACA-box', 'CD-box', 'riboswitch', 'Intron_gpI', 'miRNA', '5S_rRNA', 'leader', 'scaRNA', 'Intron_gpII']
+
+###################################################
+# nome del file con il modello della rete
+Alg :
+  path : "./"
+  file : "ResNet"
+
+
+
+parAlg :
+
+  input_shape : [64, 1]
+  output_shape : 13
+
+  dropout : 0.5
+
+  num_ker : 30
+  dim_ker: 20
+
+  dim_dense : 13
+
+  validation_split : 0.1
+  learning_rate : 0.00005
+  batch_size : 64
+  epochs : 400
+  regularizer : 0.01
+
+  norma : False
+
+####################################################
+
+file :
+
+  inputFile : "./dataset_Rfam_650.pkl" # path completo del file di input
+  outputDir : "./DirOut/" # directory di output
+  outputFile : "Prova_1" # prefisso del file di output
